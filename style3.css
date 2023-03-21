@@ -1,0 +1,92 @@
+a:link{
+    color:black;
+}
+a:visited{
+    color:green;
+}
+a:hover{
+    color: blue;
+}
+a:active{
+    color: brown;
+}
+.baba:hover{
+    color: yellow;
+    background-color: black;
+
+}
+button:active{
+    color:aqua;
+}
+/*
+The above two calibraces are the same at calling.
+*/
+
+li:nth-child(2n){
+    background-color: yellow;
+}
+li:nth-child(3n+2){
+    background-color: aquamarine;
+}
+
+h1{
+    text-shadow: 10px 10px 10px green,2px 2px 10px yellow;
+    box-shadow: 5px 5px 5px blue;
+}
+h1:hover{
+    box-shadow: 15px 15px 15px violet;
+}
+h2{
+    border: 3px solid green;
+    width: 100px;
+    margin-left: 120px;
+    height: 80px;
+    transform: translateX(150px);
+    font-size: 20px;
+    transform: rotateX(19deg);
+    transform: scale(2,2);
+    transform: skew(15deg,15deg);
+    transform: matrix(1,0,0,1,0,0);
+    text-align: center;
+    top: 10px;
+    background: aqua;
+    
+    animation: myColor;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-duration: 7s;
+    animation-play-state: running;
+
+    /*
+    animation: 7s  infinite 0s ease-in  running newRotate;
+    */
+    
+   }
+   
+
+@keyframes myStart{
+    from{margin-left: 0%;}
+    to{margin-left:100% ;}
+   
+}
+
+@keyframes newRotate{
+    1000%{transform:rotateX(360deg)}
+}
+@keyframes myOpacity{
+    50%{opacity: 0;}
+}
+
+@keyframes myScale{
+    50%{transform: scale(0.5,0.5);}
+}
+
+@keyframes myColor{
+    20%{background-color: green;}
+    40%{background-color: yellow;}
+    60%{background-color: red;}
+    80%{background-color: purple;}
+    100%{background-color: blue;}
+}
+

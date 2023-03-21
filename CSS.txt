@@ -1,0 +1,326 @@
+# CSS("Cascading Style Sheet")- is a style sheet language used to describe 
+presentation of a document written in MarkUp language like HTML.
+ -- ! + tab= generates new html structures.
+# To build website we need to use 
+   - Structure:  we use HTML here...like skeleton of one house under construction.  
+   - Style: We use CSS.. we add colors,lightings , decorations
+   - Functionality: Javascript in house it is like heating,plumbing.
+# CSS:
+   1- Inline
+   2- Internal
+   3- External
+
+#-1 Inline:  
+    eg: <body style="background-color: aqua;">
+
+        </body>
+    eg2: We can also use hexadeximal notation #(hastak)followed by 6 letters.
+        <body style="background-color: #000000;">  // white=FFFFFF
+
+        </body>
+--For inline we style the code at every single line that we want to make a change.
+
+#-2 Internal
+- We write between <head> and </head>
+ eg: <style>
+        body{
+            background-color:black;
+        }
+        h1{
+            color:whitesmoke;
+        }
+        p{
+            color: brown;
+            font-weight: 300;
+            font-family: 'Times New Roman', Times, serif;
+        }
+     </style>
+#-3 External : Prefered way to do.
+ we use the following below to link our html with external css.
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+-- we can use the link line between head and use it for more than one html.
+>> to make one paragraph different from other we use id and at the time
+of styling it in css we use # then the name of the id to style it.
+  eg:
+ <p id="p1">Lorem Ipsum </p>   ... at html
+
+ #p1{
+    color: yellow;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+
+}    ... at CSS
+
+>> Access by class
+  eg: <p class="two">Lorem Ipsum </p>  ... at html
+      
+.two{
+    background-color: white;
+    color: green;
+}   ... at CSS
+     
+--------------------FONTS-----------------------
+
+#  eg: font-family: "consolas",sans-serif; 
+--- The above means that if it doesnot display the first font it takes 
+the second into consideration.We can take 2 or 3 fonts.
+... we can get fonts from: https://fonts.google.com/
+
+# eg:  text-decoration: underline;
+       text-decoration: wavy underline;
+       text-decoration: dotted underline;
+       text-decoration: green dotted underline; // gas green color dotted underline.
+
+# eg: font-size: 12px;
+
+   -----------------BORDERS---------------------
+
+# eg: border-style: solid;
+  -- we use dashed,dotted,double,ridge,groove,inset,outset
+# eg: border-width: 9px;
+# eg:border-radius:5px; 
+# eg: border-color: crimson;
+# eg: padding: 10px; .... gap between the text and the border.
+
+#eg:border-top-style: groove;
+    border-left-style: double;
+    border-right-style: ridge;
+    border-bottom-style: dashed;
+#eg:border-right-width: 10px;
+    border-right-color: gold;
+
+ -----------------BACKGROUND--------------------
+# eg: background: linear-gradient(to right,aqua,lightgreen);
+.. mix two colors.
+-- we can make it to right,to left , to top or to bottom to see d/t effect.
+.. the above color repeats as it reachs the end.
+# eg: background-repeat: no-repeat;  ... avoids repition.
+# eg: background-attachment: fixed;.... the colors remain fixed and unchanged.
+
+# eg:background-image: url("  ");... we put this in body section and
+     style it by adding background image using this format.
+ 
+-------------------MARIGINS------------------------
+# Marigin is a space around an element.
+ --marigin is between the object inside and outside page.
+ --padding is gap between the text and the border.
+#eg: border: 2px solid;
+#eg: #box1{
+    border: 10px;
+    width: 200px;
+    height: 200px;
+    background: green;
+    font-size: 17px;
+    }
+#eg:margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+--The above 4 line is the same as margin:50px;
+
+  margin-left:50%; ---- uses 50% of the window to the left.
+  margin-left: auto;....makes to stick to the right edge of the page.
+  
+  margin-right: auto;
+  margin-left: auto;
+--If the above two lines  margin right and left are found together it be 
+  sticked to the middle.
+ 
+
+----------------------FLOAT PROPERTIES-----------------------------
+#eg: <img src="" width="200px">  ....we make the image to 200 px.
+# Float - positions an element to the left or right side of a container.
+  -- It used to wrap elements around an image.
+#eg: <body>
+    <div class="box">BoxOne</div>
+    <div class="box2">BoxTwo</div>
+     </body>
+
+.box{
+    float: right;---------------It floats to the right
+    font-style: italic;
+    width: 200px;
+    height: 4vmin;
+    border: 2px groove;
+    background: linear-gradient(yellow,aquamarine);
+    text-align: center;
+
+}
+
+ p{
+    clear: right;----- It clears the paragraph which is to the right.
+}
+
+---The clear property stops floating.
+
+-----------------------CSS POSITIONING-----------------------------
+
+# eg:   position:absolute;
+---Position can be absolute,relative,fixed,static,sticky.
+--It covers the text files or paragraph. This will be covered by position styles.
+
+# <div class="box">BoxOne
+        <div class="box2">BoxTwo</div>
+  </div>
+
+-- Here box2 is the child of box.
+---What ever we do in box also works in box2. 
+# eg: position:fixed;
+-- makes the box fixed here and other page contents like paragraph
+scroll up and down while the position of box remain fixed.
+---The box doesnot seem it is part of the reamining pages.
+#-ms-page,-webkit-sticky makes the child to be separated from the box.
+# eg: position: sticky;
+---Makes it to be sticky and remain at the bottom after scrolling.
+
+----------------------PSEUDO CLASS-----------------------------------
+
+# Pseudo-class: is a keyword added to a selector that specifies a 
+                special state of the selected element(s).
+# eg:<body>
+    <a href="https://github.com/robelmass1">  My GitHub</a>
+    
+   </body> ....at HTML
+
+   a:link{
+    color:black;
+}  ---- At CSS
+
+--> We can also use other pseudo class in addition to link such as:
+ visited(feature's after we visit it),hover,active(works if we hold
+the mouse)
+#eg: <ul>
+        <li>Poznan</li>
+        <li>Lodz</li>
+        <li>Warsazawa</li>
+        <li>Wroclaw</li>
+        <li>Gdansk</li>
+     </ul> .....At HTML
+
+li:nth-child(4){
+    background-color: yellow;
+}  At CSS
+--> The above makes the child 4 to be a changed background.
+--> We can also use even,odd instead of the numbers and it appies
+to the even and odd lines.
+--> We can also use n instead of number 4 above. 
+2n(apply every second lines), 3n(every third line),3n+2(5 th)...
+
+----------------------------SHADOWS--------------------------------
+ 
+# Shadows : can be text shadow or box shadow. 
+# eg: text-shadow: 10px 10px 10px green;
+--> The first three are pixels and the last is the color.
+-->The first number is positioning of  x-axis(positive - to right,
+negative-to left)
+-->The second number is positioning of  y-axis(positive - shadow 
+below text,negative-shadow above text)
+-->The third number is for the spread of the shadow(like intensity).
+# eg: text-shadow: 10px 10px 10px green,2px 2px 20px yellow;
+--> We can also use two shadow properties together.
+# eg: box-shadow: 5px 5px 5px blue;
+--> This can make the shadow around the text like a box.
+# eg:h1:hover{
+       box-shadow: 15px 15px 15px violet;
+
+      } 
+-->It makes the hover(pseduo class) around the box shadow.
+
+
+...>>> https://fontawesome.com...used to get d/t fonts for web.
+..> to use the above fonts we use the line below and put in head section.
+<script src="https://kit.fontawesome.com/3131841332.js" crossorigin="anonymous"></script>
+
+---------------------------TRANSFORMATION-----------------------------
+
+# eg:  transform: translateX(150px);
+--> the above makes the one there to translate by 150px on X-axis.    
+# eg:transform: translateX(150px);
+     transform: translateY(150px);
+---The above two line is the same as the one below.
+     transform: translate(150px,150px);
+# eg: transform: rotateX(100deg);
+---This rotate about X axis by 100 degrees.
+#eg:     transform: scaleX(2);
+         transform: scale(2,2);
+--This scales it twice as wide on x-axis.
+# eg: transform: skew(15deg,15deg);
+--> Skews by 15 degree about x and y here.We can also de it separate.
+# eg:  transform: matrix(1,0,0,1,0,0);
+-.For Matrix we have 6 values these are:first(scale x),second(skew y),
+third(skew x),fourth(scale y),fifth(translate x) and sixth(translate y).
+
+----------------------ANIMATIONS -----------------------------------
+# syntax :   
+
+@keyframes myStart{
+    from()
+    to()
+}
+
+# eg: 
+h2{ 
+   animation: myStart;
+   animation-iteration-count: infinite;
+   animation-duration: 7s;
+   animation-delay: 1s; 
+   animation-timing-function: ease-out;
+   animation-play-state: running;
+}
+
+
+@keyframes myStart{
+    from{margin-right:100%;}
+    to{margin-right:0%;}
+}
+
+--myStart is the name we used and we link it with the part we want.
+--iteration count can be 1,2,--- or infinite.
+--animation-delay make it to start new iteration after that second.
+--ease-out: begin fast and decleerate
+--ease-in: begin slow and increase.
+--ease: decelerates and accelerates.
+--linear : has constant animation.
+
+
+-->>>we can write the above 6 lines in h2 in one line as:
+     animation: 7s ease-in 0s infinite running myStart;
+
+# eg: Animation  with Pseudo class
+    
+h2:active{
+    animation: 7s  infinite 0s ease-in  running myStart;
+
+
+}
+..instead of active we can also use hover.
+
+#eg: 
+  @keyframes newRotate{
+    100%{transform: rotateX(180%);}
+  }
+-->Applies transform after it reachs 100% 
+
+#eg: 
+    @keyframes myOpacity{
+    50%{opacity: 0;}
+}
+# eg: 
+     
+@keyframes myScale{
+    50%{transform: scale(0.5,0.5);}
+}
+
+#eg:
+@keyframes myColor{
+    20%{background-color: green;}
+    40%{background-color: yellow;}
+    60%{background-color: red;}
+    80%{background-color: purple;}
+    100%{background-color: blue;}
+}
+
+

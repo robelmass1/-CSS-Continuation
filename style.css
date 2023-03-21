@@ -1,0 +1,69 @@
+body{
+    background:gray;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    border: green 2px dashed;
+}
+h1{
+    color:whitesmoke;
+    border-top-style: groove;
+    border-left-style: double;
+    border-right-style: ridge;
+    border-bottom-style: dashed;
+    border-right-width: 10px;
+    border-right-color: gold;
+}
+
+#box1{
+    border: 10px;
+    width: 200px;
+    height: 200px;
+    background: green;
+    font-size: 17px;
+
+    margin-left: auto;
+}
+.box2{
+    border: 18px;
+    width: 200px;
+    height: 200px;
+    background:yellowgreen;
+    font-size: 17px;
+    margin-right: auto;
+    padding-left: 10px;;
+}
+p{
+    color: aquamarine;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+#p1{
+    color: yellow;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+#p3{
+    color: cornsilk;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-style: ridge;
+    border-width: 9px;
+    border-color: crimson;
+    padding: 1px;
+    
+
+}
+.two{
+    background-color: white;
+    color: green;
+    
+}
+.four{
+    color: black;
+    font-family: "consolas",sans-serif;
+    text-decoration: green dotted underline;
+    font-size: 10px;
+
+}

@@ -1,0 +1,37 @@
+.box{
+    float: right;
+    font-style: italic;
+    width: 210px;
+    height: 210px;
+    border: 2px groove;
+    background: linear-gradient(yellow,aquamarine);
+    text-align: center;
+    top: 200px;
+    bottom:100px;
+    left: 50px;
+    right: 50px;
+    
+    position: sticky;
+
+    
+
+}
+.box2{
+    float: left;
+    font-style: italic;
+    width: 100px;
+    height: 100px;
+    border: 2px groove;
+    background: linear-gradient(white,aquamarine);
+    text-align: left;
+    position:  absolute;
+    top: 70px;
+    bottom:70px;
+    left: 50px;
+  
+
+}
+
+p{
+    clear: right;
+}
